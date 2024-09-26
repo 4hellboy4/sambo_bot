@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bot:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - ./:/sambo_bot
+      - bot_data:/
+
+volumes:
+  bot_data:  # Define a named volume for persistent storage
